@@ -1,0 +1,820 @@
+{
+	"info": {
+		"_postman_id": "4118088d-8f11-4dc9-a401-017b047faf14",
+		"name": "orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "order statuses",
+			"item": [
+				{
+					"name": "create order status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"names\":\r\n  [\r\n    {\r\n      \"translated_language_id\":\"1\",\r\n      \"order_status_name\":\"Start\"\r\n    },\r\n    {\r\n      \"translated_language_id\":\"2\",\r\n      \"order_status_name\":\"Start\"\r\n    }\r\n]\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/statuses/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"statuses",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"names\":\r\n  [\r\n    {\r\n      \"id\":3,\r\n      \"translated_language_id\":\"1\",\r\n      \"order_status_name\":\"Start2\"\r\n    },\r\n    {\r\n      \"id\":4,\r\n      \"translated_language_id\":\"2\",\r\n      \"order_status_name\":\"Start2\"\r\n    }\r\n]\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/statuses/update/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"statuses",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show order status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/statuses/edit/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"statuses",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete order status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/statuses/delete/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"statuses",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all order statuses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/statuses/index",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"statuses",
+								"index"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order types",
+			"item": [
+				{
+					"name": "show all order types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/types/index",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"types",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create order type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"names\":\r\n  [\r\n    {\r\n      \"translated_language_id\":\"1\",\r\n      \"order_type_name\":\"Start3\"\r\n    },\r\n    {\r\n      \"translated_language_id\":\"2\",\r\n      \"order_type_name\":\"Start3\"\r\n    }\r\n]\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/types/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"types",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"names\":\r\n  [\r\n    {\r\n        \"id\":3,\r\n      \"translated_language_id\":\"1\",\r\n      \"order_type_name\":\"Start3\"\r\n    },\r\n    {\r\n        \"id\":4,\r\n      \"translated_language_id\":\"2\",\r\n      \"order_type_name\":\"Start3\"\r\n    }\r\n]\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/types/update/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"types",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show order type",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/types/edit/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"types",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete order type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/types/delete/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"types",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "show all order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/index",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address_details\":\"addresss\",\r\n        \"delivered_to_person_name\":\"name\",\r\n        \"delivered_to_person_address\":\"addess\",\r\n        \"delivered_to_person_mobile\":\"098765432\",\r\n        \"postal_code\":\"7865\",\r\n        \"total_price\":6.9,\r\n        \"shipping_cost\":4.7,\r\n        \"shipping_rating\":5,\r\n        \"free_shipping\":1,\r\n        \"is_payment_done\":0,\r\n        \"delivered_to_person_region_id\":76,\r\n        \"user_id\":1 ,\r\n        \"shipping_company_in_region_id\":34,\r\n        \"service_id\":56,\r\n        \"customer_address_id\":55,\r\n        \"order_type_id\":1,\r\n        \"currency_id\":34,\r\n        \"description\":\"desc\",\r\n        \"shipping_date\":\"05/10/2020\",\r\n        \"order_status_id\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address_details\":\"addresss\",\r\n        \"delivered_to_person_name\":\"name\",\r\n        \"delivered_to_person_address\":\"addess\",\r\n        \"delivered_to_person_mobile\":\"098765432\",\r\n        \"postal_code\":\"7865\",\r\n        \"total_price\":6.9,\r\n        \"shipping_cost\":4.7,\r\n        \"shipping_rating\":5,\r\n        \"free_shipping\":1,\r\n        \"is_payment_done\":0,\r\n        \"delivered_to_person_region_id\":76,\r\n        \"user_id\":1 ,\r\n        \"shipping_company_in_region_id\":34,\r\n        \"service_id\":56,\r\n        \"customer_address_id\":55,\r\n        \"order_type_id\":1,\r\n        \"currency_id\":34,\r\n        \"description\":\"desc\",\r\n        \"shipping_date\":\"05/10/2020\",\r\n        \"order_status_id\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/update/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/edit/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/delete/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order files",
+			"item": [
+				{
+					"name": "create order file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "            {\"url\" : \"url\",\r\n            \"is_for_payment\" : 1,\r\n            \"is_for_shipping\" : 0,\r\n            \"order_id\" :1\r\n            }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/files/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"files",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "            {\"url\" : \"url\",\r\n            \"is_for_payment\" : 0,\r\n            \"is_for_shipping\" : 1,\r\n            \"order_id\" :1\r\n            }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/files/update/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"files",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show order file",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/files/edit/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"files",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete order file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/files/delete/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"files",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all order files",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODJjYmM2YjlmZWUwNTM1ZDU1MWZlMmIyMTE2NTViOGJhNzhhNTA0NDYzZWFlN2I0Y2YxMGYwN2Q4MjVkNmM4OGViN2VjNTIwMmViZGUzNDkiLCJpYXQiOjE2MTQzMzY1NDQsIm5iZiI6MTYxNDMzNjU0NCwiZXhwIjoxNjE2NzU1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.jDJkjdrfZNPvhZrTZm12jfDtTJk2qL3fTlAQTjMAhSqYOgTSzwRmxYa7w1diRim-W0FutdN4NSws4sC1BbHBpEI8-J5Wn-f07srGmRTWuXXH8HngayPTgc39HdOKJebjF6Tf8oFwrLp9A43jZ7omYL-C0Hg_HuxkptMJmCHNt9D0BOAf6Zg1rKsYdI5wa_6v5C4L_foyeLxhVnAb7e3abCKWqjvfuKRrWgnti2IcD09-lNCnpmWQo9u0GTIjQ7AWntTdMihmdrTzjKWeQ3nSQbnO0B1lp_EuE7gdOarzXLelT96hrPxTHyuCd85k2MAKbxC1CI8JmplpdSM_y2bY9gpRi8igRqVBJzHngwvBNGa-xXKBH0JAGqZTaJMPIZaLPsq4ZnEo-1lyl83W9u_AykAxKmzAFU2Lm0_W6RRropqtr5I_iqQkA6SzSUlGAX1yug1dy7DNhyuktkZZo6xY4__05gZNeKLfdtRRhVhbJvNBtYAc209lz1_dYEwYx1EpQ0_Jm-6UGazwUNRb5TicL2CIkExS4EU1Q1u-82FL4hir_xaZxvyzsHfxcghbrd5gQo-ISAvjq8fmqAWSJvXZDWx-Mol8Wg3moSkSHcvhJ91yxhBsGgHif0k7TWXHEsmy2M_5fd6wWMkyrd36QWNAPajc-oXoVkjWGSO1bEFXYNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/orders/files/index",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"orders",
+								"files",
+								"index"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,8 @@
+
+use App\Exceptions\RequestException;
+use Illuminate\Validation\ValidationException;
+
+$errors = (new ValidationException($validator))->errors();
+throw new RequestException(
+    response()->json(['msg' => $errors], 422)
+);

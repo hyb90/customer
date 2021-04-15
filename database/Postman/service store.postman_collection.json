@@ -1,0 +1,4880 @@
+{
+	"info": {
+		"_postman_id": "d62c0559-2d6c-4083-bd58-b18e7427f961",
+		"name": "service store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "general",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"base_admin@test.com\",\r\n    \"password\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/general/login",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"general",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "vendor",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"vendor1\",\r\n    \"email\": \"vendor1@test.com\",\r\n    \"password\": \"123456\",\r\n    \"confirm password\": \"123456\",\r\n    \"mobile_phone\":\"1122334455\",\r\n    \"default_lang_id\":1,\r\n    \"region_id\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/vendor/register",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"vendor",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "employee",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"base_admin2\",\r\n    \"email\": \"base_admin2@test.com\",\r\n    \"password\": \"123456\",\r\n    \"confirm password\": \"123456\",\r\n    \"role_id\":1,\r\n    \"default_lang_id\":1,\r\n    \"region_id\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/employee/register",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"employee",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"customer1\",\r\n    \"email\": \"customer1@test.com\",\r\n    \"password\": \"123456\",\r\n    \"confirm password\": \"123456\",\r\n    \"mobile_phone\":\"2342342342341\",\r\n    \"default_lang_id\":1,\r\n    \"manager_id\":5,\r\n    \"region_id\":1,\r\n    \"customer_type_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/customer/register",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "business opportunities",
+			"item": []
+		},
+		{
+			"name": "general",
+			"item": [
+				{
+					"name": "services",
+					"item": [
+						{
+							"name": "show service",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/services/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"services",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all services",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/services",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete service",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/services/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"services",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit service",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/services/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"services",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update service",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"id\": 1,\r\n            \"verified_by_user_id\": 1,\r\n            \"names\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"service_id\": 1,\r\n                    \"translation_lang_id\": 1,\r\n                    \"name\": \"servic asdf sad fe11\",\r\n                    \"description\": \"ser safd asdfsvice_desc\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"service_id\": 1,\r\n                    \"translation_lang_id\": 1,\r\n                    \"name\": \"الخsd fsدمة1 1\",\r\n                    \"description\": \"الةصف 1\"\r\n                }\r\n            ]\r\n        }"
+								},
+								"url": {
+									"raw": "{{backend_url}}/services/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"services",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add service",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"names\":[\r\n        {\r\n            \"name\":\"service11\",\r\n            \"description\":\"service_desc\",\r\n            \"translation_lang_id\":\"1\"\r\n        },\r\n        {\r\n            \"name\":\"الخدمة1 1\",\r\n            \"description\":\"الةصف 1\",\r\n            \"translation_lang_id\":\"1\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/services/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"services",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "project files",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/files",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"files"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add file",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"file_name\":\"file2\",\r\n    \"file_path\":\"path2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/files/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"files",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete file",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/files/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"files",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update file",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2,\r\n    \"file_name\":\"file22\",\r\n    \"file_path\":\"path22\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/files/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"files",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show file",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/files/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"files",
+										"show"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "migrate",
+					"item": [
+						{
+							"name": "migrate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/migrate",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"migrate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rollback",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/rollback",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"rollback"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "pages",
+					"item": [
+						{
+							"name": "add page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"page1\",\r\n    \"endpoint\":\"endpoint1\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/pages/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"pages",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete page",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"page_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/pages/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"pages",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all pages",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/pages",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"pages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all categories at specific page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"page_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/pages/categories",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"pages",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"id\": 1,\r\n            \"name\": \"page122312\",\r\n            \"endpoint\": \"endpoint1342324\"    \r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/pages/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"pages",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show pages of specified category",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/pages/categories/1",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"pages",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/pages/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"pages",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Regions",
+					"item": [
+						{
+							"name": "Region Types",
+							"item": [
+								{
+									"name": "add region type",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"names\":[\r\n        {  \r\n            \"translation_lang_id\":1,\r\n            \"region_type_name\":\"region1\"\r\n\r\n        }\r\n    ]\r\n}"
+										},
+										"url": {
+											"raw": "{{backend_url}}/region-types/create",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"region-types",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete region type",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{backend_url}}/region-types/delete/4",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"region-types",
+												"delete",
+												"4"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show all region types",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{backend_url}}/region-types/index",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"region-types",
+												"index"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit region type",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":1\r\n}"
+										},
+										"url": {
+											"raw": "{{backend_url}}/region-types/edit",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"region-types",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update region type",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n            \"id\": 1,\r\n            \"verified_by_user_id\": 1,\r\n            \"names\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"region_type_id\": \"1\",\r\n                    \"translation_lang_id\": \"1\",\r\n                    \"region_type_name\": \"region1111\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"region_type_id\": \"1\",\r\n                    \"translation_lang_id\": \"5\",\r\n                    \"region_type_name\": \"سw1w1w1بيب\"\r\n                }\r\n            ]\r\n}"
+										},
+										"url": {
+											"raw": "{{remote_url}}/region-types/update",
+											"host": [
+												"{{remote_url}}"
+											],
+											"path": [
+												"region-types",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Regions",
+							"item": [
+								{
+									"name": "add region",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"names\":[\r\n        {  \r\n            \"translation_lang_id\":1,\r\n            \"region_name\":\"قصقصd\",\r\n            \"region_description\":\"صثقصثdeصق\"\r\n        }\r\n    ],\r\n    \"region_locations\":[\r\n        {\r\n            \"region_lat\":12,\r\n            \"region_long\":23\r\n        },\r\n        {\r\n            \"region_lat\":23.2,\r\n            \"region_long\":12.5\r\n        }\r\n    ],\r\n   \"region_type_id\" : 1\r\n}"
+										},
+										"url": {
+											"raw": "{{backend_url}}/regions/create",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"regions",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete region",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{backend_url}}/regions/delete/3",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"regions",
+												"delete",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show all regions",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{backend_url}}/regions/index",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"regions",
+												"index"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update region",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": " {      \r\n       \"id\": 1,\r\n            \"is_verified_from_us\": 1,\r\n            \"region_type_id\": \"1\",\r\n            \"parent_region_id\": null,\r\n            \"country_id\": null,\r\n            \"govern_id\": null,\r\n            \"city_id\": null,\r\n            \"street_id\": null,\r\n            \"is_country\": 1,\r\n            \"is_govern\": 1,\r\n            \"is_city\": 1,\r\n            \"is_street\": 1,\r\n            \"names\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"region_id\": \"1\",\r\n                    \"translation_lang_id\": \"1\",\r\n                    \"region_name\": \"سيسيب\",\r\n                    \"region_description\": \"سيييس\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"region_id\": \"1\",\r\n                    \"translation_lang_id\": \"5\",\r\n                    \"region_name\": \"jhm\",\r\n                    \"region_description\": \"cbv\"\r\n                }\r\n            ],\r\n            \"region_locations\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"region_lat\": \"12.232\",\r\n                    \"region_long\": \"23.2122\",\r\n                    \"region_id\": \"1\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"region_lat\": \"123.2\",\r\n                    \"region_long\": \"12.35\",\r\n                    \"region_id\": \"1\"\r\n                }\r\n            ]\r\n }"
+										},
+										"url": {
+											"raw": "{{remote_url}}/regions/update",
+											"host": [
+												"{{remote_url}}"
+											],
+											"path": [
+												"regions",
+												"update"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit region",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":1\r\n}"
+										},
+										"url": {
+											"raw": "{{remote_url}}/regions/edit",
+											"host": [
+												"{{remote_url}}"
+											],
+											"path": [
+												"regions",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "devices",
+					"item": [
+						{
+							"name": "device type",
+							"item": [
+								{
+									"name": "index",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{remote_url}}/device-types/index",
+											"host": [
+												"{{remote_url}}"
+											],
+											"path": [
+												"device-types",
+												"index"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show one",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{backend_url}}/device-types/1",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"device-types",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"sdfsdf\",\r\n    \"parent_id\":3\r\n}"
+										},
+										"url": {
+											"raw": "{{backend_url}}/device-types/2",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"device-types",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "tokenType",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Bearer",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"type2\"\r\n}"
+										},
+										"url": {
+											"raw": "{{backend_url}}/device-types/create",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"device-types",
+												"create"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "add device ",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"ngnrggn\",\r\n    \"region_id\":1,\r\n    \"serial_number\":\"csdfsdf\",\r\n    \"device_types_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/devices/add-device",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"devices",
+										"add-device"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all devices",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/devices/index",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"devices",
+										"index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show device by id",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/devices/1",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"devices",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete device",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/devices/2",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"devices",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update device",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"aaaaaaaaa\",\r\n        \"description\": \"bbbbbbbb\",\r\n        \"first_visit_at\": null,\r\n        \"last_visit_at\": null,\r\n        \"region_id\": \"1\",\r\n        \"serial_number\": \"q11q1q1q1q1q1q1q1\",\r\n        \"visites_number\": \"10000\",\r\n        \"device_types_id\": \"3\"\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/devices/1",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"devices",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit device",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/devices/edit/1",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"devices",
+										"edit",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "create role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"vendor\",\r\n    \"description\":\"vendor desc\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/roles/create",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"roles",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all roles",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/roles/index",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"roles",
+										"index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete role",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/roles/1",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"roles",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show role",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/roles/8",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"roles",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update role",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"manager\",\r\n    \"description\":\"manager desc\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/roles/8",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"roles",
+										"8"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "translation languages",
+					"item": [
+						{
+							"name": "delete language",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/languages/destroy",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"languages",
+										"destroy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit language",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":5\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/languages/edit",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"languages",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show language",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/languages/show",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"languages",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update language",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{remote_url}}/languages/update",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"languages",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all languages",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/languages/index",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"languages",
+										"index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add language",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"ِEnglish\",\r\n    \"language_code\":\"EN\" \r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/languages/create",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"languages",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Managing",
+					"item": [
+						{
+							"name": "upload file post",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file_name",
+											"value": "file1",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Ali Suliman/Pictures/Screenshots/Screenshot (4).png"
+										},
+										{
+											"key": "file_path",
+											"value": "\\collection2\\category_photos",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{backend_url}}/managing/image-upload",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"managing",
+										"image-upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add convertions",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"one_dinar_in_dollar\": 213,\r\n    \"taxes_in_kuwait_in_dinar\": 123,\r\n    \"taxes_out_kuwait_in_dinar\": 312,\r\n    \"one_dollars_in_QAR\": 123,\r\n    \"one_dollars_in_SAR\": 123,\r\n    \"one_dollars_in_OMR\": 123,\r\n    \"one_dollars_in_AED\": 421,\r\n    \"one_dollars_in_BHD\": 123\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/managing/add-convertions",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"managing",
+										"add-convertions"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "chat",
+					"item": [
+						{
+							"name": "chat",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "get all users",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/users/index",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"users",
+										"index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/users/profile",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"users",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user locations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/users/get_locations/2",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"users",
+										"get_locations",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "employee Labels",
+					"item": [
+						{
+							"name": "show all labels",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/Employee_Labels",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Labels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"label2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Labels/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Labels",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete label",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":5\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Labels/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Labels",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":6\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Labels/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Labels",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update label",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"name\": \"label222\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Labels/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Labels",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":6\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Labels/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Labels",
+										"show"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "employee status",
+					"item": [
+						{
+							"name": "show all statuses",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/Employee_Statuses",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Statuses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"status2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Statuses/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Statuses",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Statuses/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Statuses",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":15\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Statuses/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Statuses",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 2,\r\n        \"name\": \"status233332\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Statuses/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Statuses",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employee_Statuses/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employee_Statuses",
+										"show"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "employee",
+					"item": [
+						{
+							"name": "show all employees",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/Employees",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show employee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":15\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employees/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employees",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete employee",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":14\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employees/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employees",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit employee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":15\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/Employees/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"Employees",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "employee vs label",
+					"item": [
+						{
+							"name": "show all labels of employee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employee_id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/EmployeeVsLabels/labels_of_employee",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"EmployeeVsLabels",
+										"labels_of_employee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all employees of label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employee_label_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/EmployeeVsLabels/employees_of_label",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"EmployeeVsLabels",
+										"employees_of_label"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add label to employee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employee_id\":3,\r\n    \"employee_label_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/EmployeeVsLabels/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"EmployeeVsLabels",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove label from employee",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/EmployeeVsLabels/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"EmployeeVsLabels",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "customer types",
+					"item": [
+						{
+							"name": "show all customer types",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/CustomerTypes",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerTypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show customer type",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":4\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerTypes/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerTypes",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create customer type",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"type2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerTypes/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerTypes",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete customer type",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerTypes/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerTypes",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit customer type",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":4\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerTypes/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerTypes",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update customer type",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 4,\r\n        \"name\": \"type444\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerTypes/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerTypes",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "customer statuses",
+					"item": [
+						{
+							"name": "show all customer status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/CustomerStatuses",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerStatuses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add customer status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"status3\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerStatuses/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerStatuses",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete customer status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerStatuses/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerStatuses",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit customer status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":4\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerStatuses/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerStatuses",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update customer status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"statuseeeeeeeeeeeeeeewww2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerStatuses/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerStatuses",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "customer labels",
+					"item": [
+						{
+							"name": "show all customer labels",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backend_url}}/CustomerLabels",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerLabels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show customer label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerLabels/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerLabels",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add customer label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"label2\",\r\n    \"color\":\"color1\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerLabels/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerLabels",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete customer label",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerLabels/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerLabels",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit customer label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerLabels/edit",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerLabels",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update customer label",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"label2222\",\r\n    \"color\": \"color1111\"\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerLabels/update",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerLabels",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "customers_vs_labels",
+					"item": [
+						{
+							"name": "add label to customer",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_id\":12,\r\n    \"customer_label_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerVsLabels/add",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerVsLabels",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove label from customer",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerVsLabels/delete",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerVsLabels",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all labels of customer",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_id\":12\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerVsLabels/labels_of_customer",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerVsLabels",
+										"labels_of_customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show all customers of label",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_label_id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/CustomerVsLabels/customers_of_label",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"CustomerVsLabels",
+										"customers_of_label"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "contact",
+			"item": []
+		},
+		{
+			"name": "content",
+			"item": [
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "Category_To_Category",
+							"item": [
+								{
+									"name": "show sons of parent",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{backend_url}}/categories/category-sons/1",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"categories",
+												"category-sons",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show parents of son",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{remote_url}}/categories/category-parents/6",
+											"host": [
+												"{{remote_url}}"
+											],
+											"path": [
+												"categories",
+												"category-parents",
+												"6"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add relationship",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"parent_id\":30,\r\n    \"son_id\":22\r\n}"
+										},
+										"url": {
+											"raw": "{{remote_url}}/categories/add-parent",
+											"host": [
+												"{{remote_url}}"
+											],
+											"path": [
+												"categories",
+												"add-parent"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove relationship",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"parent_id\":2,\r\n    \"son_id\":4\r\n}"
+										},
+										"url": {
+											"raw": "{{backend_url}}/categories/rem-parent",
+											"host": [
+												"{{backend_url}}"
+											],
+											"path": [
+												"categories",
+												"rem-parent"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show root",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{remote_url}}/categories/root",
+											"host": [
+												"{{remote_url}}"
+											],
+											"path": [
+												"categories",
+												"root"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{remote_url}}/categories/index",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"categories",
+										"index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessToken",
+											"value": "{{project_manager_token}}",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"max_price_new\":9999,\r\n    \"min_price_new\":1111,\r\n    \"max_price_old\":9999,\r\n    \"min_price_old\":1111,\r\n    \"parent_ids\":[\r\n        {\"parent_id\":8},\r\n        {\"parent_id\":9},\r\n        {\"parent_id\":10},\r\n        {\"parent_id\":11}\r\n            ],\r\n    \"names\":[\r\n        {\r\n            \"translation_lang_id\":1,\r\n            \"category_name\":\"test\"\r\n        },\r\n        {\r\n            \"translation_lang_id\":6,\r\n            \"category_name\":\"تجربة\"\r\n        }\r\n    ],\r\n    \"category_pages\": [\r\n        {\r\n            \"page_id\":1\r\n        }\r\n    ],\r\n    \"category_regions\":[\r\n        {\r\n            \"region_id\":1\r\n        }\r\n    ],\r\n    \"category_photos\":[\r\n        {\r\n            \"device_id\": 1,\r\n            \"photo_path\": \"ite\",\r\n            \"photo_size\": 1.0\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/categories/add",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"categories",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show category by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":220\r\n    \r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/categories/show",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"categories",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/categories/edit",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"categories",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "udpate category",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessToken",
+											"value": "{{project_manager_token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"id\": 6,\r\n            \"max_price_new\": 99999,\r\n            \"min_price_new\": 11111,\r\n            \"max_price_old\": 8888,\r\n            \"min_price_old\": 2222,\r\n            \"show_pages\": \"no\",\r\n            \"names\": [\r\n                {\r\n                    \"id\": 11,\r\n                    \"category_id\": 6,\r\n                    \"translation_lang_id\": 1,\r\n                    \"category_name\": \"1عصن\"\r\n                },\r\n                {\r\n                    \"id\": 12,\r\n                    \"category_id\": 6,\r\n                    \"translation_lang_id\": 2,\r\n                    \"category_name\": \"bq1vu\"\r\n                }\r\n            ],\r\n            \"category_paths\": [\r\n                \"نةعصن \\\\ نعصن \\\\ سيب \\\\ شسششسشس\"\r\n            ],\r\n            \"category_photos\": [\r\n                {\r\n                    \"id\": 11,\r\n                    \"photo_path\": \"it11111e\",\r\n                    \"photo_size\": 111111,\r\n                    \"category_id\": 6,\r\n                    \"device_id\": 1\r\n                },\r\n                {\r\n                    \"id\": 12,\r\n                    \"photo_path\": \"ht11111r\",\r\n                    \"photo_size\": 1.41111,\r\n                    \"category_id\": 6,\r\n                    \"device_id\": 3\r\n                }\r\n            ],\r\n            \"category_regions\": [\r\n                {\r\n                    \"id\": 6,\r\n                    \"category_id\": 6,\r\n                    \"region_id\": 1\r\n                }\r\n            ],\r\n            \"category_pages\": [\r\n                {\r\n                    \"id\": 11,\r\n                    \"category_id\": 6,\r\n                    \"page_id\": 1\r\n                },\r\n                {\r\n                    \"id\": 12,\r\n                    \"category_id\": 6,\r\n                    \"page_id\": 2\r\n                },\r\n                {\r\n                    \"id\": 15,\r\n                    \"category_id\": 6,\r\n                    \"page_id\": 3\r\n                }\r\n            ]\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/categories/update",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"categories",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":27\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/categories/delete",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"categories",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add translation to specific catefory",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_translations\":[\r\n        {\r\n            \"category_id\":3,\r\n            \"translation_lang_id\":6,\r\n            \"category_name\":\"t-sdfsfss\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/categories/add-category-translation",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"categories",
+										"add-category-translation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add category to page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_id\":6,\r\n    \"page_id\":3\r\n}"
+								},
+								"url": {
+									"raw": "{{remote_url}}/categories/pages/add",
+									"host": [
+										"{{remote_url}}"
+									],
+									"path": [
+										"categories",
+										"pages",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show categories of specified page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "tokenType",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "headerPrefix",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"page_id\":1\r\n}"
+								},
+								"url": {
+									"raw": "{{backend_url}}/categories/pages",
+									"host": [
+										"{{backend_url}}"
+									],
+									"path": [
+										"categories",
+										"pages"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c20cbcaa-5429-4f25-b60f-7f7653ae9313",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cac94e4d-358b-4a94-bb0e-6f070a02f945",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e5978ec4-2dde-4dee-832b-02a48b8f0222",
+			"key": "backend_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"id": "6d6cecd3-3359-4341-8b9d-ceccdaf16a29",
+			"key": "admin_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWFjNmI4MjYxMWNlYTgzNDAyMDc2ZTZhMGFjOWJmYTYzNzBmZmYzOWY1MGU0YTk2MDE1M2ExZGY3NzZiODQxNWJiMmMyMzVmYzgyNWE4N2EiLCJpYXQiOiIxNjEzMjYxOTgyLjcyOTMxOSIsIm5iZiI6IjE2MTMyNjE5ODIuNzI5MzMyIiwiZXhwIjoiMTYxNTY4MTE4Mi4zMTExOTgiLCJzdWIiOiI2Iiwic2NvcGVzIjpbImFkbWluIl19.Dd2-ssrD-X_lwddR3AO7_s8lZ831sfjqxXayAnQzbaQGs85PgndNwYGam7WtwMs5-EW8GEgcTma4JioMet9Q01Ne415zdjKovYpXuxwBVmz_eRRcLjNictjzjp053wsdw38WCxiJYSzGltiZmf7S342aQN27WGXAYBEJcwLaOZ5-wNcNllSFzYULevfi41CcOczDCSHjzc76KTW9ucbabTW468gJqDfoRkn2M3g4owtO5dnR_URezMsnjFYEFN2zHn5dqZI8SyrvdVvKh8TA4xRkTqMHCQhxugrmJ8HvjT6yvVgQpM3A6JGjY5rVAtPtpxzG56bGDmIQYr_tb6T6erVu6sxakZaQBpYjm3UDzlATveoGfH8b7tIJM9fz63LMji_ouBFFMrUExpVekwQanXOjB9_s_3QuYXJMZCiCpcCIXCNHKPxVdNvreA3t2nUHZofjhs7MX0UGLhS0Sxy6xCojN6esP-H6ejTXWY9bd0RUu6vkgpYLhPjI7mapl_5WJixE7WqxRZUWp7SNOPY353xA5SDJyrgNlvBKYu1J1muVwdMNh_84IDqYR7z5q_w3x-T57zusW9WGcw-T-eH629gy_wmJsHgPJSpFlude0QlEYuH9Q7XKpvFQFkhQOefho-Am8QbqaP7VpzRXxiEEEQ0Olk4thn-ZVsmk_0fXj3M",
+			"type": "string"
+		},
+		{
+			"id": "804169a5-7e92-4457-9aa9-2ea7fd27d173",
+			"key": "project_manager_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTc3YmJlY2JmZDI1NWFhNmE4OGZiZDliNjVhZGRmMmUwYzBhMGE3NjJjYjFmMTlkMmI2OGU5OTg4YjI1OTQzYjFlOTJmOWZhNDI3OTVhMTgiLCJpYXQiOiIxNjExMjA2NTgyLjQ0ODIwOCIsIm5iZiI6IjE2MTEyMDY1ODIuNDQ4MjI4IiwiZXhwIjoiMTYxMzg4NDk4MS44OTE5MzMiLCJzdWIiOiIzIiwic2NvcGVzIjpbIlByb2plY3RfTWFuYWdlciJdfQ.EmPr_TaspBMROxuFfGLZMrE41Gd51IsdDSKV7SXkiYYOpmUoN6OTemy9QjYrPw-tjfiLIgncC5rGYrfvI4dP8hT4DLWYrVOi27G4WXnsLn4U7UBb-uN7O9TH-1Wew6y2sWiW8PNbFuIsIfTr4H1WfOVyKjwZ4NRGXBAqp1uwmgf7Cg7b6f9lQ8Nii8Mqz8C_x7M8ERzu1lj5TgBz8bEVLcy5xneFNrZG5Zv5XuC4EZ02HwsVKSSlDxlaKomy3vb3K-2CITtk-T10_mFv9PkrTVDHcgp2o7Yc_gAue4ed9jWt0kka-tFIbWTVS7D0jWm50c5qoXXNBUOfkCIAq29m1FFSI79sDKatyLdKQwg1sWOT4h89c0NXZJgd2EWvHli-VQP0CN10imcIoayb7eJ9BX66kqKJVNcsZ3GF65aRmjHPySp4dL97fy0RT9ijeS9TnWI3lFEThgMBUhzvRYgQycc041ZiWaxb1xX6TP388WiUJatV_WfrWCDBpuY_6baCmmoPdkcLR1kTiP7XmbbAyoJeDPMpEcNOcUIZarFqUBdap6ioBGsTaIO-SEQN8J54zMFh5skMZzWABV6JgEFX8u0LWTkuR3CaqPU7OKntdfTTh90BE4aTyTLCerhuZtYwfwlhwrkR9ygw3JbvlWtzk-_CsSCU6cll-_rNHfbK-G4",
+			"type": "string"
+		},
+		{
+			"id": "e4049445-19fe-43d0-a55c-b4669df9e7db",
+			"key": "customer_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYyNGI5YTIzYzNmNDY2MmYxOTVjMTQxODNiNjhjYzcwN2E1NWIyNDRkNGEwYWU1MTgwZWE5Y2JmZjVmZGYwNWMzMjIyNzZhNTA4ZTBkN2UiLCJpYXQiOiIxNjEyODE3OTEzLjE4NjQwOCIsIm5iZiI6IjE2MTI4MTc5MTMuMTg2NDIwIiwiZXhwIjoiMTYxNTIzNzExMi42NjAxMDUiLCJzdWIiOiI0Iiwic2NvcGVzIjpbImN1c3RvbWVyIl19.iijf9BDWNxL8QecZjf3ZoVLajnrM5PGAKWbXXPZka3u7OR0qLa2gbZcsg7gXm4tDYft-wxhFujudR598-Fmdl1ZdskwD5d3kEK1AtG2nsnkFbmElvMV_h85lOJ7jox_rsgngNtMPFrskbEu1CzKHa7ZxZ3a2Tq6WvoHvDwol4JLbMXRaac4rKW0kJyTmTr2groZ-MLax18_2JHDa22dkIF9zgmCLUbzbY-4UVRnDujR6FPOKMUQWKgWJ2vr5cBQnDoKXdPL4MCrSR3nPahBSUpy01O5D7imOEjZ0rAQ6A-xc0kN_eWsruygReL1fSw_z8Gg4HUH_KbpXhGxtfOXXk77c-ZkndVZMWzAnp_nIt-NbCCcuN-OkN24Ig0ddhq7t9RHrjpaygqemWFCuea1dsJHR5sn793Jk6yFATGTQ-tj7AKWXeKZ0sgPL8MjbmqQODieYzzrAbNQkk2ydYcnAkQeBM8QMz97Exxur9z8drOJveiIFXGImaW2fuLpISI449wKzXA15UXL3Yp7k3Pqkb7oSEKHQ0yIrehHEex_LSMUimvLpJIyRycXkImonyi69GIAEGGq81QAL2pMIsRTu9ESolEe41WoI5zzwuXuXS_ydly5PRZnLtwNMSuxbgFzi9VUAD5VcqpMCuheRsc45wQQCBDm9n1NNHIiT_z94rTI",
+			"type": "string"
+		},
+		{
+			"id": "145e75cd-6a55-44d8-9f15-691785dd017b",
+			"key": "vendor_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdkYWRkOTIxOWIxZmIyZGMzMGQ0M2YzMzA3ODY5ZjAxYjEyMmQ0MjQyY2U0MDYzNWY1ZGZlNTgzYjg4MGM3NzAwMmFmYTUwM2E1MDQ4OWYiLCJpYXQiOiIxNjExNTY3MDExLjc5NTA3OCIsIm5iZiI6IjE2MTE1NjcwMTEuNzk1MDg4IiwiZXhwIjoiMTYxNDI0NTQxMS4zOTc3MDkiLCJzdWIiOiI3Iiwic2NvcGVzIjpbIlZlbmRvciJdfQ.kfoxXEoXNSs9nDUkJoK2dj5_mOAw2JQTlDLW-_hyTuseVkvmsqJ1Jiqhz_pvr-nyMc5ROx-yBSfQmZmNxCP-tTT_BIw4xDqyenbp51T6oBtJK6Yvo7-q2aKQ9KpeuirAUo_PioTlhk2MJXUj8pikh2luxSQ1SEQn1Pg-nwednzjqyz3cMo1K43dGjeJUG4K5nGhZgaGW3wEec6sGtuT5w04nfHVzBErr78q7JUfGY52B2A3dZ7yEu4ukE-418FHoRbAHd39xF5NtS1XIeksOPKLMGhmCHoT5oenFBJ91r-Mnv4KcRZX1gLCNwIxJZeDtb2oDXB8zd-b6SA0ZuLLcXrnkvKIiV_zAG-LGje7k-t6OMosLyb7TnERubWf8znz9JOskuk3ugqHmR9lhDoCT4_4mbw-AOrjMF6j0ChwLNRuIQNpTgAmaSAWm3X0FdVMtS8yDHWMlAppSIEJjWxBDoUzLmREhoxIZLKI_TRHbPbWjN85XOcg_wBrrAld3m2U8d9vzHR1Kt1pvRleDdySGcWKNV1UPT084zoOAmv0rGayX93OHyIV3H6NMJ20iXPMmdmLM06Pu6Co3rXLzjAg1DPZitI-BuOFvlk5i-001wsyNXSO8zPewOaTa0deTl8f3LN_OSCsyjQPNC92SiGWAF36G7itMQSHX2X5simKm--g",
+			"type": "string"
+		},
+		{
+			"id": "fbe6fe07-35fe-46d9-b02f-9ff772add67f",
+			"key": "employee_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzQzMWY5NmE5OGZiYzYwNTFiYWZmNTBhZjAwYWU4YzZmYjU1NmE2OGJlMmMzYzAxNzhkYjdlMTQwODI5NjA4MjIyYzhkYjU2N2VlMjc3ZWUiLCJpYXQiOiIxNjExNjYyMzMxLjAwMDYzMyIsIm5iZiI6IjE2MTE2NjIzMzEuMDAwNjUxIiwiZXhwIjoiMTYxNDM0MDczMC42MTUwMDgiLCJzdWIiOiIxMCIsInNjb3BlcyI6WyJhZHZlcnRpc2luZ19tYW5hZ2VyIl19.eSYpe4RFHus2EpZdg49UNKGlHVGpA6YzgTKfeTctI6speopf91EBB-EmUCIbsfUvta6lHZKNxW9OU2xW2ufiKHLaqnbkpp-TavxkKQDlVorcKW9YNR_Ew9DAMHalK7uCkdGDxiC7RXWKuCszIPHKscVRIfEWs3KztRw6FF3-mAmL3uGyN8mQr3uE3xETl6KlipcA0at5MrMq_V6rVJI1kb98VxVihQ49s-D7XBRuGq8zG5-XRCOsIqbqZOabLfZLoTuAq3kFwvus5MtXT1T-amWroKscIlTGICGUIG87PuJ0s-fKHYGjVrgfow94okjDxQ6xW9adE3GEsem7Qt1h50ZnqcgLDxhtNclmd6VMPtx87DjuTmPpH5_m_tdP_czXy1DyYGCMDnqsHMvGWr3zX3YngsFLP-WHJK39xQOtGp_QKF8GGD7t0AXE_8EIDfQ7TMN6qKqOeQTpez8GfoiEtEDBVRXjN53Lqz3lTIc9qjy_LOZR4rIrvhh5HRMS8TWshRXPBMRCLRhN19gIbRGHceMCu1hdnh0uNCV5DClAin4vluz4zjklhh1wzMoc2AFfo9sHHHpfyM_qmyBnbvOJotDA3tkKjiuYFNxd9IovqsSeFm7cpIsW7_7jZ57R3Uwth8Coo553EMoUOqTRiddlNGcnCQLK7Q0XisdewX0M5QU",
+			"type": "string"
+		},
+		{
+			"id": "3925e6cd-f47c-4a82-9d87-a176bc689980",
+			"key": "remote_url",
+			"value": "http://shubrumah.com/backend/v1/public",
+			"type": "string"
+		}
+	]
+}
