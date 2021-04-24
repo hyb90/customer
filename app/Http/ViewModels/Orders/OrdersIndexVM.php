@@ -19,6 +19,9 @@ class OrdersIndexVM implements Arrayable
         if($filter['status'])
             $orders = $orders->where('order_status_id', $filter['status']);
 
+        if($filter['from_date'] && $filter['to_date'])
+            $orders = $orders->whereBetween('created_at', [$filter['from_date'], $filter['to_date']]);
+
         $filter_type = $filter['asc'] ? 'asc' : 'desc';
 
         if($filter['creation_date'])

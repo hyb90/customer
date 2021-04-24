@@ -29,7 +29,10 @@ class ShowOrderVM implements Arrayable
 
     public function get_user($user_id){
         $user = User::find($user_id);
-        $user = new ShowUserVM($user,$user->role()->first()->name,true);
+        $role_name = $user->role()->first();
+        if($role_name)
+            $role_name = $role_name->name;
+        $user = new ShowUserVM($user,$role_name,true);
         return $user->toArray(true);
     }
     public function get_status($order_status_id){
